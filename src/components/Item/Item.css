@@ -70,7 +70,7 @@
 @media (max-width: 768px) {
   .item-container {
     padding: 15px;
-    width: 90%; /* Ajusta a largura para caber bem na tela */
+    width: 90%; 
     margin: 10px auto;
   }
 
