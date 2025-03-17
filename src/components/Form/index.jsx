@@ -15,16 +15,19 @@ const Form = ({ onAdd, onEdit, editTask }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     if (editTask) {
       onEdit({ id: editTask.id, title, description });
     } else {
+      // Certifique-se de que os dados estão sendo passados corretamente
+      console.log({ title, description }); // Adiciona um log para verificar os dados antes de enviar
       onAdd({ title, description });
     }
-
+  
     setTitle("");
     setDescription("");
   };
+  
 
   return (
     <form className="form-container" onSubmit={handleSubmit}>
